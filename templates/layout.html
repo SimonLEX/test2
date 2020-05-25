@@ -1,19 +1,19 @@
 <!DOCTYPE HTML>
-<html lang="kr">
+<html lang="en">
   <head>
     <meta charset="utf-8">
 
     {% if title %}
-      <title>Flask 블로그 - {{ title }}</title>
+      <title>Flask blog - {{ title }}</title>
     {% else %}
-      <title>Flask 블로그</title>
+      <title>Flask blog</title>
     {% endif %}
   </head>
 
   <body>
     <header>
       <nav>
-        <a href="{{ url_for('index') }}">Flask 블로그</a>
+        <a href="{{ url_for('index') }}">Flask blog</a>
         <a href="{{ url_for('index') }}">Home</a>
         <a href="{{ url_for('about') }}">About</a>
       </nav>

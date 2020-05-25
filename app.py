@@ -9,16 +9,16 @@ posts = [
         'author': {
             'username': 'test-user'
         },
-        'title': '첫 번째 포스트',
-        'content': '첫 번째 포스트 내용입니다.',
+        'title': 'First post',
+        'content': 'first post note.',
         'date_posted': datetime.strptime('2018-08-01', '%Y-%m-%d')
     },
     {
         'author': {
             'username': 'test-user'
         },
-        'title': '두 번째 포스트',
-        'content': '두 번째 포스트 내용입니다.',
+        'title': 'Second post',
+        'content': 'second post note.',
         'date_posted': datetime.strptime('2018-08-03', '%Y-%m-%d')
     },
 ]
