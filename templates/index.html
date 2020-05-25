@@ -1,28 +1,18 @@
-<!DOCTYPE HTML>
-<html lang="kr">
-  <head>
-    <meta charset="utf-8">
+{% extends 'layout.html' %}
 
-    {% if title %}
-      <title>Flask blog - {{ title }}</title>
-    {% else %}
-      <title>Flask blog</title>
-    {% endif %}
-  </head>
-
-  <body>
-    <header>
-      <nav>
-        <a href="{{ url_for('index') }}">Flask blog</a>
-        <a href="{{ url_for('index') }}">Home</a>
-        <a href="{{ url_for('about') }}">About</a>
-      </nav>
-      <hr>
-    </header>
-
-    <main role="main">
-    <!-- Main content block -->
-    {% block content %}{% endblock %}
-    </main>
-  </body>
-</html>
+{% block content %}
+<div>
+  <div>
+    {% for post in posts %}
+      <article>
+        <h1>{{ post.title }}</h1>
+        <p>{{ post.content}}</p>
+        <div>
+          <p>{{ post.author.username }}</p>
+          <p>{{ post.date_posted.strftime('%Y-%m-%d') }}</p>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
